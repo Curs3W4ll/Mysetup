@@ -32,12 +32,12 @@ Before use the mysetup program, you need to configure it a litle
 
 First of all, please never modify or move another file than the following ones :
 
--lib/my/Makefile
+`-lib/my/Makefile`
 
--tests/\*
+`-tests/\*`
 
 
-So, to correctly config your setup, please copy your library to this path : setupfiles/lib
+So, to correctly config your setup, please copy your library to this path : `setupfiles/lib`
 
 Actually, this folder is empty but you need to feel it with your personal library
 
