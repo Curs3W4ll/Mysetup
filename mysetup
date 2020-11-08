@@ -1,0 +1,24 @@
+#!/bin/bash
+if [ -z $1 ] ; then
+    echo -e "USAGE\n    mysetup PROJECT_NAME BINARY_NAME <GIT_URL>\n\nDESCRIPTION\n    PROJECT_NAME : the name of your project, exemple : My_arduino_project\n    BINARY_NAME : the name of the binary, exemple : arduiproj\n    GIT_URL (optionnal) : the URL of your git repository"
+elif [ -z $2 ] ; then
+    echo -e "USAGE\n    mysetup PROJECT_NAME BINARY_NAME <GIT_URL>\n\nDESCRIPTION\n    PROJECT_NAME : the name of your project, exemple : My_arduino_project\n    BINARY_NAME : the name of the binary, exemple : arduiproj\n    GIT_URL (optionnal) : the URL of your git repository"
+else
+    now=$(date +'%Y')
+    if [ -z $3 ] ; then
+        mdir $1
+    else
+        git clone $3 $1
+    fi
+    cp -r ~/Mysetup/setupfiles/.gitignore $1/
+    cp -r ~/Mysetup/setupfiles/include/ $1/
+    cp -r ~/Mysetup/setupfiles/lib/ $1/
+    cp -r ~/Mysetup/setupfiles/src/ $1/
+    cp -r ~/Mysetup/setupfiles/tests/ $1/
+    cp -r ~/Mysetup/setupfiles/Makefile $1/
+    echo -e "/*\n** EPITECH PROJECT, ${now}\n** Main\n** File description:\n** Main file of $1 project\n*/\n\n#include \"main.h\"\n\nint main(void)\n{\n    return 0;\n}" > $1/src/main.c
+    echo -e "/*\n** EPITECH PROJECT, ${now}\n** Main\n** File description:\n** Main prototypes of $1 project and other includes\n*/\n\n#ifndef MAIN_H_\n#define MAIN_H_\n\n#include "my.h">\n\n\n#endif /* MAIN_H_ */" > $1/include/main.h
+    echo "NAME       =   $2" >> $1/Makefile
+    cat ~/Mysetup/setupfiles/makefile_part2 >> $1/Makefile
+    echo -e "$2" >> $1/.gitignore
+fi
