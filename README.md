@@ -67,5 +67,10 @@ If you want to make your directory from a git, then you can add a third argument
 
 
 ---
+# Updating
+To update the new version, you can use the update.sh file in ~/Mysetup/ by type the following line : `~/Mysetup/./update.sh`
+
+
+---
 # Other usefull program :
 [Analyse program](https://github.com/benalex33000/AnalyseFunction)
