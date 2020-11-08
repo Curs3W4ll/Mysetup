@@ -1,0 +1,9 @@
+*.out
+*~
+#*#
+*.swp
+*.a
+*.o
+*.gcno
+*.gcda
+gcovr*
