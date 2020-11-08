@@ -41,6 +41,9 @@ So, to correctly config your setup, please copy your library to this path : `set
 
 Actually, this folder is empty but you need to feel it with your personal library
 
+If you correctly done your configuration, your folder should look like :
+![Exemple directory tree](img/exemple_directory.png)
+
 
 ---
 # Usage
@@ -51,9 +54,7 @@ Please do configuration step before start using the program
 
 Mysetup allow you to create your new project directory easily
 
-After doing your setup, you will have a new directory with the name you want looking with that look :
-
-![Exemple directory tree](img/exemple_directory.png)
+After doing your setup, you will have a new directory with the name you want
 
 To use the mysetup program, you need to type the following line :
 
