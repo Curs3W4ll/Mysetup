@@ -39,7 +39,7 @@ First of all, please never modify or move another file than the following ones :
 
 So, to correctly config your setup, please copy your library to this path : `setupfiles/lib`
 
-Actually, this folder is empty but you need to feel it with your personal library
+Actually, this folder is empty but you need to fill it with your personal library
 
 If you correctly done your configuration, your folder should look like :
 ![Exemple directory tree](img/exemple_directory.png)
