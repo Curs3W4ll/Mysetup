@@ -4,14 +4,14 @@ A program to help you create a new project directory
 ---
 # Installation
 Type the following lines in a terminal :
-`cd
-git clone https://github.com/Curs3W4ll/Mysetup.git
-cd Mysetup
-chmod 755 build.sh
-./build.sh`
+`cd`
+`git clone https://github.com/Curs3W4ll/Mysetup.git`
+`cd Mysetup`
+`chmod 755 build.sh`
+`./build.sh`
 You should have :
-`>>>Installation done
->>>Type mysetup to use it`
+`>>>Installation done`
+`>>>Type mysetup to use it`
 
 If you have trouble to install the program please contact the developer
 
