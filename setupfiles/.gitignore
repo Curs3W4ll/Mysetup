@@ -6,4 +6,6 @@
 *.o
 *.gcno
 *.gcda
+*.html
 gcovr*
+unit_tests
