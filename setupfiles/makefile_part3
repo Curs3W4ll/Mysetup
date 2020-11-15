@@ -25,7 +25,7 @@ fclean: 	clean
 re:			fclean all
 
 tests_run:
-	gcc -o unit_tests $(SRC) $(TEST_SRC) -Llib/ -lmy -Iinclude/ --coverage -lcriterion
+	gcc -o unit_tests $(SRC) $(TEST_SRC) $(LDFLAGS) $(CPPFLAGS) --coverage -lcriterion
 	./unit_tests
 
 .PHONY: all lib clean fclean re tests_run
