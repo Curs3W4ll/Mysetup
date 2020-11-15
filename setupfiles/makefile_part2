@@ -1,29 +1,13 @@
+## Makefile
+## File description:
+## Makefile | https://www.gnu.org/software/make/manual/html_node/Implicit-Variables.html#Implicit-Variables
+##
 
-CFLAGS		=	-Wall -Werror -Wextra
+CC			= 	gcc
 
-LDFLAGS		= 	-L./lib -lmy
+RM			= 	rm -rf
 
-CPPFLAGS	=	-I./include
+SRC			=	src/main.c
 
-all: 		$(NAME)
-
-$(NAME): 	$(OBJ) lib
-	$(CC) -o $(NAME) $(OBJ) $(LDFLAGS) $(CPPFLAGS) $(CFLAGS)
-
-lib:
-	make -C lib/my/
-
-clean:
-	$(RM) $(OBJ)
-
-fclean: 	clean
-	$(RM) $(NAME)
-
-re:			fclean all
-
-tests_run:
-	gcc -o unit_tests src/main.c tests/test.c -Llib/ -lmy -Iinclude/ --coverage -lcriterion
-	./unit_tests
-
-.PHONY: all lib clean fclean re dbg tests_run
+OBJ			=	$(SRC:.c=.o)
 

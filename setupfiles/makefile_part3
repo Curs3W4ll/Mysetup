@@ -1,0 +1,31 @@
+
+TEST_SRC 	= 	src/main.c
+
+CFLAGS		=	-Wall -Werror -Wextra
+
+LDFLAGS		= 	-L./lib -lmy
+
+CPPFLAGS	=	-I./include
+
+all: 		$(NAME)
+
+$(NAME): 	$(OBJ) lib
+	$(CC) -o $(NAME) $(OBJ) $(LDFLAGS) $(CPPFLAGS) $(CFLAGS)
+
+lib:
+	make -C lib/my/
+
+clean:
+	$(RM) $(OBJ)
+
+fclean: 	clean
+	$(RM) $(NAME)
+
+re:			fclean all
+
+tests_run:
+	gcc -o unit_tests $(SRC) $(TEST_SRC) -Llib/ -lmy -Iinclude/ --coverage -lcriterion
+	./unit_tests
+
+.PHONY: all lib clean fclean re tests_run
+
