@@ -1,5 +1,5 @@
 
-TEST_SRC 	= 	src/main.c
+TEST_SRC 	= 	tests/test.c
 
 CFLAGS		=	-Wall -Werror -Wextra
 
@@ -9,7 +9,7 @@ CPPFLAGS	=	-I./include
 
 all: 		$(NAME)
 
-$(NAME): 	$(OBJ) lib
+$(NAME): 	lib $(OBJ)
 	$(CC) -o $(NAME) $(OBJ) $(LDFLAGS) $(CPPFLAGS) $(CFLAGS)
 
 lib:
@@ -20,6 +20,7 @@ clean:
 
 fclean: 	clean
 	$(RM) $(NAME)
+	make -C lib/my/ fclean
 
 re:			fclean all
 
