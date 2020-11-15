@@ -21,10 +21,17 @@ else
     cp -r ~/Mysetup/setupfiles/.gitignore $1/
     echo -e "/*\n** EPITECH PROJECT, ${now}\n** Main\n** File description:\n** Main file of $1 project\n*/\n\n#include \"main.h\"\n\nint main(void)\n{\n    return 0;\n}" > $1/src/main.c
     echo -e "/*\n** EPITECH PROJECT, ${now}\n** Main\n** File description:\n** Main prototypes of $1 project and other includes\n*/\n\n#ifndef MAIN_H_\n#define MAIN_H_\n\n    #include \"my.h\"\n\n\n\n#endif /* MAIN_H_ */" > $1/include/main.h
-    echo "NAME        =   $2" >> $1/Makefile
+    echo -e "##\n## EPITECH PROJECT, ${now}" > $1/Makefile
     cat ~/Mysetup/setupfiles/makefile_part2 >> $1/Makefile
+    echo "NAME        =   $2" >> $1/Makefile
+    cat ~/Mysetup/setupfiles/makefile_part3 >> $1/Makefile
     echo -e "$2" >> $1/.gitignore
     echo -e "# $1" > $1/README.md
     cat ~/Mysetup/setupfiles/readme_part2 >> $1/README.md
+    echo -e "##\n## EPITECH PROJECT, ${now}" > $1/lib/my/Makefile
+    cat ~/Mysetup/setupfiles/lib/my/makefile_part2 >> $1/lib/my/Makefile
+    sleep 0.1
     echo "Creation done !"
+    sleep 0.1
+    cd $1;
 fi
