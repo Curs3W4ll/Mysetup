@@ -1,1 +1,17 @@
-This is a readme file
+```
+
+```
+---
+# Project organisation
+[Project organisation link](URL "Trello")
+---
+# Commit layout
+{type} [file_name]
+  → type : "SETUP" "FILE" "FOLDER" "MERGE" ...
+  → file_name : without .X ; "main" "my_..."
+
+## DESCRIPTION
+- {action} function/part --> description
+  → action : Create / Add / Modif / Import / Remove / Delete
+  → function/part : name of the `action` function, or the file
+  → description : description of the `action` made

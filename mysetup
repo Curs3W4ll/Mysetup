@@ -29,7 +29,7 @@ else
     echo -e "# $1" > $1/README.md
     cat ~/Mysetup/setupfiles/readme_part2 >> $1/README.md
     echo -e "##\n## EPITECH PROJECT, ${now}" > $1/lib/my/Makefile
-    cat ~/Mysetup/setupfiles/lib/my/makefile_part2 >> $1/lib/my/Makefile
+    cat ~/Mysetup/setupfiles/makefile_part2_lib >> $1/lib/my/Makefile
     sleep 0.1
     echo "Creation done !"
 fi
